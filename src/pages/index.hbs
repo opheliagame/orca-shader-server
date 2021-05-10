@@ -47,7 +47,10 @@
           menu: true
       });
     
-      
+      window.addEventListener('storage', () => {
+        console.log('hello')
+        console.log(window.localStorage);
+      });
   </script>
   
 </html>
