@@ -48,8 +48,10 @@
       });
       console.log(glslEditor)
     
-      glslEditor.editor.addEventListener('change', () => {
-        console.log(glslEditor.editor.options.value);
+      glslEditor.editor.on('change', () => {
+        glslEditor.update();
+        // console.log(glslEditor.editor.options.value);   // initial only
+        console.log(glslEditor.editor.getValue());
       })
       
   </script>

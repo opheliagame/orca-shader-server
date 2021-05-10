@@ -76,7 +76,8 @@ fastify.post("/", function(request, reply) {
   reply.view("/src/pages/index.hbs", params);
 });
 
-fastify.get('/shader', function(req, res) {
+fastify.post('/shader', function(req, res) {
+  let shader = req.body.shader;
   
 });
 
