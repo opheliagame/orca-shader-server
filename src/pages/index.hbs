@@ -46,11 +46,12 @@
           fileDrops: true,
           menu: true
       });
+      console.log(glslEditor)
     
-      window.addEventListener('storage', () => {
-        console.log('hello')
-        console.log(window.localStorage);
-      });
+      glslEditor.editor.addEventListener('change', () => {
+        console.log(glslEditor.editor.options.value);
+      })
+      
   </script>
   
 </html>
