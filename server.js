@@ -76,6 +76,10 @@ fastify.post("/", function(request, reply) {
   reply.view("/src/pages/index.hbs", params);
 });
 
+fastify.get('/shader', function(req, res) {
+  
+});
+
 // Run the server and report out to the logs
 fastify.listen(process.env.PORT, function(err, address) {
   if (err) {
