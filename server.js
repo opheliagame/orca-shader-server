@@ -1,4 +1,18 @@
 const path = require("path");
+const { createStore } = require('redux');
+
+const setShader = (state = { value: 0 }, action) => {
+  switch (action.type) {
+    case 'counter/incremented':
+      return { value: state.value + 1 }
+    case 'counter/decremented':
+      return { value: state.value - 1 }
+    default:
+      return state
+  }
+}
+
+let store = createStore(setShader)
 
 // Require the fastify framework and instantiate it
 const fastify = require("fastify")({
@@ -78,6 +92,8 @@ fastify.post("/", function(request, reply) {
 
 fastify.post('/shader', function(req, res) {
   let shader = req.body.shader;
+  store.dispatch({ type: 'counter/incremented' })
+  console.log(store.getState())
   
 });
 

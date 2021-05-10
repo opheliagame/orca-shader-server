@@ -5,7 +5,14 @@ dependencies:
   fastify-static: 4.0.1
   handlebars: 4.7.7
   point-of-view: 4.14.0
+  redux: 4.1.0
 packages:
+  /@babel/runtime/7.14.0:
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: false
+    resolution:
+      integrity: sha512-JELkvo/DlpNdJ7dlyw/eY7E0suy5i5GQH+Vlxaq1nsNJ+H7f4Vtv3jMeCEgRhZZQFXTjldYfQgv2qmM6M1v5wA==
   /@fastify/forwarded/1.0.0:
     dev: false
     engines:
@@ -441,6 +448,16 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
+  /redux/4.1.0:
+    dependencies:
+      '@babel/runtime': 7.14.0
+    dev: false
+    resolution:
+      integrity: sha512-uI2dQN43zqLWCt6B/BMGRMY6db7TTY4qeHHfGeKb3EOhmOKjU3KdWvNLJyqaHRksv/ErdNH7cFZWg9jXtewy4g==
+  /regenerator-runtime/0.13.7:
+    dev: false
+    resolution:
+      integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
   /ret/0.2.2:
     dev: false
     engines:
@@ -598,3 +615,4 @@ specifiers:
   fastify-static: ^4.0.0
   handlebars: ^4.7.7
   point-of-view: ^4.14.0
+  redux: ^4.0.5
